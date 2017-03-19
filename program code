@@ -1,0 +1,28 @@
+{$APPTYPE CONSOLE}
+
+uses
+  SysUtils;
+  
+  { TODO -oUser -cConsole Main : Insert code here }
+var a,b,c:real;
+begin
+writeln('Enter side a');
+readln(a);
+writeln('Enter side b');
+readln(b);
+writeln('Enter side c');
+readln(c);
+if (a+b>c) and (a+c>b) and (c+b>a) then
+writeln('Triangle can to build')
+else writeln('Triangle with such parties to build impossible');
+if (sqr(a)+sqr(b)=sqr(c)) or (sqr(a)+sqr(c)=sqr(b)) or (sqr(c)+sqr(b)=sqr(a)) then
+writeln('Triangle rectangular')
+else
+if (a=b) or (a=c) or (b=c) then
+writeln('Triangle isosceles')
+else
+if (a=c) and (c=b) then
+writeln('Triangle isosceles')
+else writeln('Triangle arbitrary');
+readln;
+end.
